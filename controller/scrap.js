@@ -1,4 +1,6 @@
 import Product from "../models/schema.js"
+// import  cheerio  from "cheerio";
+// const $ = cheerio.load(response.data);
 
 
 
@@ -21,7 +23,7 @@ export const getProducts = async (req, res) => {
 //   const rating = $(element).find('span.a-icon-alt').text().trim();
 //   const imgURL = $(element).find('img.s-image').attr('src');
 
-  //Create a new Product instance and save it to the database
+  // Create a new Product instance and save it to the database
 //   const product = new Product({
 //     title,
 //     price,

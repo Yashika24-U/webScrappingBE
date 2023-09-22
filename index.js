@@ -61,15 +61,17 @@ const scrapeAmazonHomeDecor = async () => {
    console.error('Error scraping Amazon Home Decor:', error);
  }
 };
-
+// scrapeAmazonHomeDecor();
 // Schedule the scraping to occur every 12 hours
 cron.schedule('0 */12 * * *', () => {
  console.log('Running Amazon Home Decor scraper...');
-//  scrapeAmazonHomeDecor();
+ 
  console.log('Data Scrapped');
 });
 
 app.use('/',routes);
+app.post('/saveProduct',scrapeAmazonHomeDecor);
+
 
 const PORT = 7001;
 app.listen(PORT, () => {

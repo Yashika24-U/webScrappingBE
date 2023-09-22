@@ -4,7 +4,7 @@ const productSchema = new mongoose.Schema({
     title: String,
     price: String,
     rating: String,
-    imgUrl :String,
+    imgURL :String,
   });
   
   const Product = mongoose.model('Product', productSchema);
